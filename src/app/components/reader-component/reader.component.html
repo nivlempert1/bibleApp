@@ -1,8 +1,7 @@
 <h1>{{chapter}}</h1>
-<p *ngIf="chapterText.length > 0" [innerHTML]="chapterText">
-</p>
+<p *ngIf="chapterText.length > 0" [innerHTML]="chapterText"></p>
 <span *ngIf="chapterText.length == 0">...</span>
 <div class="buttons">
-  <button (click)="next()"><</button>
-  <button (click)="prev()">></button>
+  <button (click)="prev()"><</button>
+  <button (click)="next()">></button>
 </div>

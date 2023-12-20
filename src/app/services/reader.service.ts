@@ -10,8 +10,8 @@ export class ReaderService {
 
   constructor(private dataService: DataService) { }
 
-  async fetchChapterText() {
-    const text = await this.dataService.fetchChapter(this.chapter);
+  async fetchChapterText(): Promise<string> {
+    const text = await this.dataService.fetchChapterText(this.chapter);
     this.chapterText_ = text;
     return text;
   }
